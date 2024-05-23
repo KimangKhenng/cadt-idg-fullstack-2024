@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullStack CADT</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <h1>To-Do application</h1>
+    <div id="app">
+        <p>Please input your task</p>
+        <input type="text" placeholder="បោសផ្ទះ" v-model="task">
+        <button @click="addToList">Add Task</button>
+        <ul>
+            <li v-for="(task, index) in todos" :key="index">
+                {{ task }}
+                <button @click="deleteTask">Delete</button>
+                <button @click="completeTask">Complete</button>
+            </li>
+        </ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,7 @@
 # D2 S2: Migrating from HTML/CSS Project to Vue 3
 
+Watch recorded class: https://youtu.be/6PmG9Co6qEU
+
 This exercise will guide you through migrating a HTML/CSS project to a Vue 3 project. We'll break down the process into manageable steps to help you understand the core concepts of Vue and how to integrate your existing HTML and CSS.
 
 ## Exercise Steps

@@ -16,7 +16,7 @@ We're thrilled to have you join us on this exciting journey of exploration, lear
     - [Session #2](/Modules/D2/S2/guide.md)
     - [Session #3](/Modules/D2/S3/guide.md)
     - [Session #4](/Modules/D2/S4/guide.md)
-  - D3 (Slot, Form Handling, Custom Events)
+  - D3 (Slot, Form Handling, Custom Events, Pinia)
     - [Session #1](/Modules/D3/S1/guide.md)
     - [Session #2](/Modules/D3/S2/guide.md)
     - [Session #3](/Modules/D3/S3/guide.md)

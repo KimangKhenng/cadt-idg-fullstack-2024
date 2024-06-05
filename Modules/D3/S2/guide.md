@@ -29,72 +29,45 @@ Create a Vue 3 component and set up VeeValidate for basic form validation.
 - Use useForm for form handling and useField for individual field handling.
  ### Example
  ```vue
- <!-- FormComponent.vue -->
 <template>
-  <VeeForm @submit="handleSubmit">
-    <div>
-      <label for="name">Name:</label>
-      <Field name="name" id="name" />
-      <ErrorMessage name="name" />
-    </div>
-
-    <div>
-      <label for="email">Email:</label>
-      <Field name="email" id="email" />
+  <Form @submit="handleSubmit">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <Field type="email" name="email" :rules="emailRule" />
       <ErrorMessage name="email" />
+      <small id="emailHelp" class="form-text text-muted"
+        >We'll never share your email with anyone else.</small
+      >
     </div>
-
-    <button type="submit">Submit</button>
-  </VeeForm>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <Field type="password" name="password" :rules="passwordRule" />
+      <ErrorMessage name="password" />
+    </div>
+    <button class="btn btn-primary">Submit</button>
+  </Form>
 </template>
-
 <script>
-import { VeeForm, Field, ErrorMessage, defineRule, configure } from 'vee-validate';
-import { required, email } from '@vee-validate/rules';
-import * as yup from 'yup';
-
+import { Form, Field, ErrorMessage } from "vee-validate";
+import * as Yup from "yup";
 export default {
-  name: 'FormComponent',
-  components: {
-    VeeForm,
-    Field,
-    ErrorMessage
-  },
+  components: { Form, Field, ErrorMessage },
   data() {
     return {
-      schema: yup.object({
-        name: yup.string().required('Name is required'),
-        email: yup.string().email('Email must be valid').required('Email is required')
-      })
+      email: "",
+      password: "",
+      emailRule: Yup.string().email().required(),
+      passwordRule: Yup.string().min(6).required(),
     };
   },
   methods: {
-    handleSubmit(values) {
-      console.log(values);
-      // Perform form submission tasks here
-    }
-  }
+    handleSubmit() {
+      console.log(this.email);
+      console.log(this.username);
+    },
+  },
 };
 </script>
-
-<style scoped>
-form {
-  display: flex;
-  flex-direction: column;
-}
-div {
-  margin-bottom: 16px;
-}
-label {
-  margin-bottom: 8px;
-}
-input {
-  margin-bottom: 8px;
-}
-button {
-  align-self: flex-start;
-}
-</style>
  ```
 
 ## Advanced Usage

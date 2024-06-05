@@ -1,5 +1,7 @@
 # D4 S2: File Upload
 
+Watch recorded class:https://youtu.be/MnTM7hfnViA
+
 This tutorial will guide you through the process of implementing a file upload feature in a Vue 3 application. We will cover the basic setup, creating a file input component, handling file selection, and uploading the file to a server.
 
 ## Creating the File Upload Component

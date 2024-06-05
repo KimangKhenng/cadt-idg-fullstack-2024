@@ -1,5 +1,7 @@
 # D4 S3: Vue I18n Internationalization plugin for Vue.js
 
+Watch recorded class:https://youtu.be/9Jvxo1x20mk
+
 Internationalization (i18n) is essential for creating applications that support multiple languages and locales. In this tutorial, we'll walk through the process of setting up and using `vue-i18n` with Vue 3.
 
 

@@ -2,7 +2,6 @@
 
 Watch recorded class: https://youtu.be/ejVh3LRFmpA
 
-
 Pinia is a state management library for Vue.js that is designed to work seamlessly with Vue 3. It provides a simple and intuitive API for managing application state, making it easy to share data between components and manage complex application state.
 
 In this tutorial, we will walk through the steps of setting up and using Pinia with Vue 3 in a Vue project.

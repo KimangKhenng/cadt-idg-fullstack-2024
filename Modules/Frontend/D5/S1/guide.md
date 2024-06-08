@@ -1,5 +1,7 @@
 # D5 S1: Using .env Files in Vue 3
 
+Watch recorded: https://youtu.be/DRj1a091VP8
+
 ![Env variables](/Modules/Frontend/D5/S1/environment-variable-secret.jpg)
 
 ## Introduction

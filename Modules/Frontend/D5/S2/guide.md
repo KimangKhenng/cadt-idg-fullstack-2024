@@ -1,5 +1,7 @@
 # D5 S2 : Deploying a Vue Project to Netlify Using CLI
 
+Watch recoded video: https://youtu.be/pC4pgVvyPl8
+
 Deploying your Vue project to Netlify is straightforward and efficient using the Netlify CLI. Here’s a step-by-step guide to help you get started.
 
 ## Prerequisites

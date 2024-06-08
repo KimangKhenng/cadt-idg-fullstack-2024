@@ -1,5 +1,7 @@
 # D5 S3 : Migrating to `<script setup>` in Vue 3
 
+Watch recorded video: https://youtu.be/RC3tGEgm1pI
+
 Vue 3 introduces the `<script setup>` syntax, which is a more concise way to use the Composition API. It simplifies component setup and can lead to more readable and maintainable code.
 
 ## Introduction

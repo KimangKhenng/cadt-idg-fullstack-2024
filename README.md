@@ -31,4 +31,9 @@ We're thrilled to have you join us on this exciting journey of exploration, lear
     - [Session #2](/Modules/Frontend/D5/S2/guide.md)
     - [Session #3](/Modules/Frontend/D5/S3/guide.md)
     - [Session #4](/Modules/Frontend/D5/S4/guide.md)
+  - D6 (Netlify Env & Plugin, )
+    - [Session #1](/Modules/Frontend/D6/S1/guide.md)
+    - [Session #2](/Modules/Frontend/D6/S2/guide.md)
+    - [Session #3](/Modules/Frontend/D6/S3/guide.md)
+    - [Session #4](/Modules/Frontend/D6/S4/guide.md)
 - Backend : Express.JS

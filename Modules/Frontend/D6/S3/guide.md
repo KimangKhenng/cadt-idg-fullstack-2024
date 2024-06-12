@@ -88,6 +88,13 @@ h1 {
 </style>
 ```
 
+Replace content `app.vue` with
+```vue
+<template>
+  <NuxtPage></NuxtPage>
+<template>
+```
+
 ### Basic Concepts of Nuxt 3
 
 #### 1\. **File-based Routing**

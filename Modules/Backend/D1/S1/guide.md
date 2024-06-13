@@ -150,13 +150,13 @@ $ mkcert -cert-file FILE -key-file FILE localhost
 
 Now use `node https` package to serve https server:
 ```js
-+ const fs = require("fs");
-+ const https = require("https");
+const fs = require("fs");
+const https = require("https");
 
 const express = require("express");
 
-+ const key = fs.readFileSync("localhost-key.pem", "utf-8");
-+ const cert = fs.readFileSync("localhost.pem", "utf-8");
+const key = fs.readFileSync("localhost-key.pem", "utf-8");
+const cert = fs.readFileSync("localhost.pem", "utf-8");
 
 const app = express();
 
@@ -165,5 +165,6 @@ app.get("/", (req, res, next) => {
 });
 
 server = https.createServer({ key, cert }, app);
+
 server.listen(3000);
 ```

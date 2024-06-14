@@ -1,5 +1,7 @@
 # D6 S3: NuxtJS
 
+Watch recorded video:https://youtu.be/G8DaRVb0mXM
+
 Nuxt 3 is a powerful framework for creating Vue.js applications, offering features like server-side rendering, static site generation, and more. Here's a step-by-step tutorial on how to bootstrap a Nuxt 3 project.
 
 ### Prerequisites

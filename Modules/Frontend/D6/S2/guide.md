@@ -1,5 +1,7 @@
 # D6 S2: Optimzing Vue
 
+Watch recorded video:https://youtu.be/OcnC_oRNOj0
+
 Optimizing a Vue 3 project can significantly enhance its performance and user experience. In this tutorial, we'll cover how to implement lazy loading in your Vue 3 project.
 
 ## Lazy Load

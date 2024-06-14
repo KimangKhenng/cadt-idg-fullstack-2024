@@ -1,5 +1,7 @@
 # D6 S1: Web Performance, Netlify Route, Env & Plugins
 
+Watch recorded video:https://youtu.be/zNsjAwnaasY
+
 There are tools to test web performance like Lighthouse and PageSpeed Insights, along with other relevant tools.
 
 ## 1. Lighthouse

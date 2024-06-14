@@ -1,5 +1,7 @@
 # D1 S4 : Using MongoDB with Express via Mongoose CRUD Operations
 
+Watch recorded class:https://youtu.be/tnzp98ztVOY
+
 MongoDB is a popular NoSQL database that provides a flexible and scalable solution for storing and managing data. When using MongoDB with Express.js, Mongoose, an Object Data Modeling (ODM) library for MongoDB and Node.js, simplifies interaction with the database. In this tutorial, we'll cover how to set up MongoDB with Express.js using Mongoose.
 
 ## Introduction to NoSQL

@@ -1,5 +1,7 @@
 # D1 S1 : Backend Development : Introduction to Express.js
 
+Watch recorded class: https://youtu.be/JqE0kQcol-8
+
 ## What is Express.js?
 
 Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. It is designed for building web applications and APIs quickly and easily. Express.js simplifies the process of writing server-side logic in JavaScript by providing a lightweight framework that handles routing, middleware, and HTTP request/response handling.

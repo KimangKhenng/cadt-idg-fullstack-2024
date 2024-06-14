@@ -1,5 +1,7 @@
 # D1 S2 : Backend Development : Express request's query and params
 
+Watch recorded class:https://youtu.be/s1UQJLjqJ8I
+
 ## Request Query
 
 Request queries are key-value pairs sent in the URL after the `?` symbol. Express.js provides a convenient way to access these query parameters.

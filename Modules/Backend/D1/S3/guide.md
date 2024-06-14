@@ -1,5 +1,7 @@
 # D1 S3 : Backend Development : Separation of Concerns in Express.js
 
+Watch recorded class:https://youtu.be/eYHPtnCtRhs
+
 ## What is Separation of Concerns?
 Separation of concerns is a design principle that encourages dividing a software system into distinct sections, each addressing a separate concern. In Express.js applications, this often involves separating routes, controllers, and the main application logic into different files to keep the codebase organized and maintainable. In this tutorial, we'll explore how to implement separation of concerns in an Express.js application using JavaScript.
 

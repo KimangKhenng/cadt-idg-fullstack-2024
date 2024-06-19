@@ -42,3 +42,8 @@ We're thrilled to have you join us on this exciting journey of exploration, lear
     - [Session #2](/Modules/Backend/D1/S2/guide.md)
     - [Session #3](/Modules/Backend/D1/S3/guide.md)
     - [Session #4](/Modules/Backend/D1/S4/guide.md)
+  - D2 (Auth & Validation)
+    - [Session #1](/Modules/Backend/D1/S1/guide.md)
+    - [Session #2](/Modules/Backend/D1/S2/guide.md)
+    - [Session #3](/Modules/Backend/D1/S3/guide.md)
+    - [Session #4](/Modules/Backend/D1/S4/guide.md)

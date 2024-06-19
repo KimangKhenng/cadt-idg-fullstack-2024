@@ -1,169 +1,213 @@
-# D2 S2: Authentication with Jso Web Token (JWT)
+# D2 S2 : Using MongoDB with Express via Mongoose CRUD Operations
 
-## What is JWT?
-A JSON Web Token (JWT) is a compact, URL-safe, and self-contained token format used for securely transmitting information between parties as a JSON object. JWTs are commonly used for authentication and information exchange in web applications and APIs. They consist of three parts separated by dots (`.`): the header, payload, and signature. Here's a breakdown of each part:
+MongoDB is a popular NoSQL database that provides a flexible and scalable solution for storing and managing data. When using MongoDB with Express.js, Mongoose, an Object Data Modeling (ODM) library for MongoDB and Node.js, simplifies interaction with the database. In this tutorial, we'll cover how to set up MongoDB with Express.js using Mongoose.
 
-1. **Header**: Contains metadata about the type of token and the cryptographic algorithm used to generate the signature. It typically looks like this:
-   ```json
-   {
-     "alg": "HS256",
-     "typ": "JWT"
-   }
-   ```
-   In this example, `alg` specifies the algorithm (e.g., HMAC SHA-256) used to create the signature, and `typ` specifies the type of token (JWT).
+## Introduction to NoSQL
 
-2. **Payload**: Contains the claims, which are statements about an entity (typically the user) and additional data. Claims are categorized into three types:
-    - **Reserved Claims**: These are predefined claims that have specific meanings and should be used when applicable. Examples include `iss` (issuer), `exp` (expiration time), `sub` (subject), and `iat` (issued at).
-    - **Public Claims**: These are user-defined claims that convey information relevant to the application. They should be defined in a way that prevents collision with reserved or other public claims.
-    - **Private Claims**: These are custom claims agreed upon between parties and are not registered in the official JWT specification.
+NoSQL databases like MongoDB and DynamoDB are designed to store and manage unstructured or semi-structured data. Unlike traditional SQL databases, they don't require a fixed schema and provide horizontal scalability.
 
-   A payload might look like this:
-   ```json
-   {
-     "sub": "1234567890",
-     "name": "John Doe",
-     "admin": true
-   }
+## NoSQL vs SQL Database
+
+- **Performance**: NoSQL databases often offer better performance for read-heavy workloads and horizontal scaling due to their distributed architecture.
+- **Use Cases**: NoSQL databases are suitable for scenarios requiring flexible data models, real-time analytics, and scalability, such as social networks, IoT applications, and content management systems.
+- **Data Organization**: NoSQL databases organize data in collections (MongoDB) or tables (DynamoDB), where each document or item can have a different structure.
+- **Deployment Cost**: NoSQL databases can be more cost-effective for scaling horizontally, as they often require less infrastructure overhead compared to vertically scaling SQL databases.
+
+## Setting up MongoDB via Docker
+
+1. Install Docker on your machine if you haven't already. [Docker Installation Guide](https://docs.docker.com/get-docker/)
+2. Pull the MongoDB Docker image:
+
+   ```bash
+   docker pull mongo
    ```
 
-3. **Signature**: The signature is created by combining the encoded header, encoded payload, and a secret key using the specified algorithm. It ensures the integrity of the token and allows verification of its authenticity.
+3. Run MongoDB as a Docker container:
 
-JWTs are often used in authentication mechanisms, where a user logs in and receives a JWT as a token of their authenticated session. The server can then validate incoming requests by verifying the JWT's signature and extracting information from the payload. This allows for stateless authentication and secure transmission of data between the client and server.
+   ```bash
+   docker run --name my-mongodb -d -p 27017:27017 mongo
+   ```
 
-## Install JWT in Express.js
-To use JWT in an Express.js application, you'll need to install the `jsonwebtoken` package, which provides utilities for creating and verifying JWTs. You can install it using npm or yarn:
+## Connect to MongoDB in Express App
 
-```bash
-npm install jsonwebtoken
-```
-## Define JWT Secret Key
-When creating and verifying JWTs, you'll need a secret key to sign and verify the tokens. It's essential to keep this key secure and not expose it in your codebase. You can define the secret key as an environment variable or in a configuration file. 
-Here's an example of defining a secret key in an environment variable in .env and read it using the `dotenv` package:
+1. Install Mongoose in your Express.js project:
+
+   ```bash
+   npm install mongoose
+   ```
+
+2. In your Express app, connect to MongoDB using Mongoose:
+
+   ```javascript
+   const mongoose = require('mongoose');
+
+   // MongoDB connection URI
+   const mongoURI = 'mongodb://localhost:27017/mydatabase';
+
+   // Connect to MongoDB
+   mongoose.connect(mongoURI)
+     .then(() => console.log('MongoDB connected'))
+     .catch(err => console.error('MongoDB connection error:', err));
+   ```
+
+3. Define Mongoose schemas and models to interact with MongoDB collections:
+
+   ```javascript
+   // Define a schema
+   const userSchema = new mongoose.Schema({
+     name: String,
+     age: Number,
+     email: String
+   });
+
+   // Create a model
+   const User = mongoose.model('User', userSchema);
+
+   // Example usage
+   const newUser = new User({ name: 'John', age: 30, email: 'john@example.com' });
+   newUser.save().then((user) => console.log('User created:', user)).catch(err => console.error('Error:', err));
+   ```
+
+## User Model
+
+Create a `user.js` file inside the `models` folder to define the `User` model:
 
 ```javascript
-// .env
-JWT_SECRET=mysecretkey
+// models/user.js
+
+const mongoose = require('mongoose');
+
+const userSchema = new mongoose.Schema({
+  username: String,
+  email: String,
+  dateOfBirth: Date,
+  password: String,
+  followings: [{ type: mongoose.Types.ObjectId, ref: 'User' }],
+  followers: [{ type: mongoose.Types.ObjectId, ref: 'User' }],
+  tweets: [{ type: mongoose.Types.ObjectId, ref: 'Tweet' }]
+});
+
+const User = mongoose.model('User', userSchema);
+
+module.exports = User;
 ```
-Then configure `dotenv` to load the environment variables in your basic Express.js application:
+
+## Tweet Model
+
+Create a `tweet.js` file inside the `models` folder to define the `Tweet` model:
+
+```javascript
+// models/tweet.js
+
+const mongoose = require('mongoose');
+
+const tweetSchema = new mongoose.Schema({
+  text: String,
+  byUser: { type: mongoose.Types.ObjectId, ref: 'User' },
+  createdDate: { type: Date, default: Date.now }
+});
+
+const Tweet = mongoose.model('Tweet', tweetSchema);
+
+module.exports = Tweet;
+```
+
+## Connecting to MongoDB
+
+In your main Express application file (`app.js` or `index.js`), connect to MongoDB using Mongoose:
 
 ```javascript
 // app.js
-require('dotenv').config();
+
+const express = require('express');
+const mongoose = require('mongoose');
+const User = require('./models/user');
+const Tweet = require('./models/tweet');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+mongoose.connect('mongodb://localhost:27017/tw-db', {
+})
+  .then(() => {
+    console.log('Connected to MongoDB');
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+  })
+  .catch(err => console.error('MongoDB connection error:', err));
 ```
-Then you can read the secret key from the environment variable in your application:
+
+## Defining Routes and Controllers
+
+Create route and controller files for `User` and `Tweet` resources. For example:
+
+### User Routes and Controller:
 
 ```javascript
-// app.js
-const jwtSecret = process.env.JWT_SECRET;
-```
-## Authenticate Users with JWT
-Here is the diagram of how JWT authentication works:
-![JWT Authentication](assets/jwt-login.jpg)
-Here is the explanation of the steps involved in JWT authentication:
-1. **User Login**: The user sends their credentials (e.g., username and password) to the server to log in.
-2. **Server Verification**: The server verifies the user's credentials against the database. If the credentials are valid, the server generates a JWT containing the user's information (e.g., user ID) and signs it with the secret key.
-3. **JWT Creation**: The server creates a JWT using the `jsonwebtoken` package, specifying the payload (user information) and the secret key for signing.
-4. **JWT Response**: The server sends the JWT back to the client as part of the login response.
-5. **Client Storage**: The client (e.g., browser) stores the JWT securely, typically in local storage or a cookie.
-6. **Subsequent Requests**: For subsequent requests, the client includes the JWT in the `Authorization` header of the HTTP request.
-7. **Server Verification**: The server receives the JWT in the request header and verifies its authenticity by checking the signature using the secret key.
-8. **User Identification**: If the JWT is valid, the server extracts the user information from the payload and uses it to identify the user and process the request.
-9. **Protected Routes**: Certain routes or resources on the server may require authentication. The server checks for the presence of a valid JWT in the request header before granting access to these protected routes.
-10. **Token Expiration**: JWTs can have an expiration time (specified in the payload), after which they are no longer considered valid. The client must obtain a new JWT by logging in again once the token expires.
-11. **Logout**: To log out, the client typically discards the JWT stored in local storage or a cookie. The server does not need to maintain a session or track user logout events, as JWTs are stateless.
+// routes/userRoutes.js
 
-## Implement JWT Authentication in Express.js
-### Signing Up User
-We use `bycrypt` to hash the password before saving it to the database. Here is an example of how to create a new user with hashed password:
+const express = require('express');
+const router = express.Router();
+const userController = require('../controllers/userController');
+
+router.post('/users', userController.createUser);
+router.get('/users', userController.getAllUsers);
+router.get('/users/:id', userController.getUserById);
+router.put('/users/:id', userController.updateUser);
+router.delete('/users/:id', userController.deleteUser);
+
+module.exports = router;
+```
 
 ```javascript
-// controllers/auth.js
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+// controllers/userController.js
 
-const signupUser = async(req, res) => {
+const User = require('../models/user');
+
+exports.createUser = async (req, res) => {
   try {
-    const { username, password } = req.body;
-    // Hash the password
-    const hashedPassword = await bcrypt.hash(password, 10);
-    // Create a new user
-    const user = new User({ username, password: hashedPassword });
-    const result = await user.save();
-    res.status(201).json({ message: 'User created successfully' });
+    const user = await User.create(req.body);
+    res.status(201).json(user);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(400).json({ message: error.message });
   }
 };
+
+// Implement other controller methods for CRUD operations
 ```
-### Logging In User
-When a user logs in, we verify their credentials against the database. If the credentials are valid, we generate a JWT and send it back to the client. Here is an example of how to log in a user and generate a JWT:
+
+### Tweet Routes and Controller:
 
 ```javascript
-// controllers/auth.js
-const loginUser = async(req, res) => {
-  try {
-    const { username, password } = req.body;
-    // Find the user by username
-    const user = await User.findOne({ username })
-    if (!user) {
-      return res.status(401).json({ message: 'Invalid credentials' });
-    }
-    // Verify the password
-    const isValidPassword = await bcrypt.compare(password, user.password);
-    if (!isValidPassword) {
-      return res.status(401).json({ message: 'Invalid credentials' });
-    }
-    // Generate a JWT
-    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-    res.status(200).json({ token });
-    } catch (error) {
-    res.status(500).json({ error: error.message });
-    }
-}
+// routes/tweetRoutes.js
+
+const express = require('express');
+const router = express.Router();
+const tweetController = require('../controllers/tweetController');
+
+router.post('/tweets', tweetController.createTweet);
+router.get('/tweets', tweetController.getAllTweets);
+router.get('/tweets/:id', tweetController.getTweetById);
+router.put('/tweets/:id', tweetController.updateTweet);
+router.delete('/tweets/:id', tweetController.deleteTweet);
+
+module.exports = router;
 ```
-The response from the login route will include the JWT, which the client can store and use for subsequent requests.
-It typically looks like this:
-```json
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzQ1"
-}
-```
-### Protecting Routes with JWT
-To protect certain routes that require authentication, we can create middleware that verifies the JWT in the request header. Here is an example of how to create a middleware function to verify the JWT:
 
 ```javascript
-// middleware/index.js
-const jwt = require('jsonwebtoken');
-const verifyToken = (req, res, next) => {
-  const token = req.headers.authorization;
-  if (!token) {
-    return res.status(401).json({ message: 'Authentication failed' });
-  }
+// controllers/tweetController.js
+
+const Tweet = require('../models/tweet');
+
+exports.createTweet = async (req, res) => {
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.userData = decoded;
-    next();
+    const tweet = await Tweet.create(req.body);
+    res.status(201).json(tweet);
   } catch (error) {
-    return res.status(401).json({ message: 'Authentication failed' });
+    res.status(400).json({ message: error.message });
   }
 };
+
+// Implement other controller methods for CRUD operations
 ```
-You can then apply this middleware to routes that require authentication by including it as part of the route handler:
-
-```javascript
-// routes/tweets.js
-const express = require("express")
-const router = express.Router()
-const { getTweetById, getAllTweets } = require("../controllers/tweet.js")
-const verifyToken = require("../middleware/index.js")
-
-router.get("/", verifyToken, getAllTweets)
-
-router.get("/:id", verifyToken, getTweetById)
-
-
-module.exports = router
-```
-
-

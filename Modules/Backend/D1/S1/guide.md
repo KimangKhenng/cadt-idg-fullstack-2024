@@ -1,6 +1,6 @@
-# D1 S1 : Backend Development : Introduction to Express.js
+# D1 S1 : Error Handling and MongoDB
 
-Watch recorded class: https://youtu.be/JqE0kQcol-8
+Watch recorded class: https://youtu.be/zDll2KksG1Q
 
 ## What is Express.js?
 
@@ -133,40 +133,3 @@ npm run dev
 
 Nodemon will monitor your files for changes, and whenever you save changes to your code, it will automatically restart the server, providing you with hot-reloading functionality during development.
 
-## Running Express over HTTPS in localhost
-
-To run this in HTTPS, we need to install a tool called `mkcert`. Follow the [installation instructions](https://github.com/FiloSottile/mkcert/blob/v1.4.1/README.md#installation) or if you’re using macOS and Homebrew, run this command:
-```bash
-$ brew install mkcert
-```
-Generate local key and certificate
-```bash
-$ mkcert -install
-$ mkcert localhost
-```
-This will create a certificate file localhost.pem and key file localhost-key.pem in the current directory.
-You can also specify the directory to genreate into.
-```bash
-$ mkcert -cert-file FILE -key-file FILE localhost
-```
-
-Now use `node https` package to serve https server:
-```js
-const fs = require("fs");
-const https = require("https");
-
-const express = require("express");
-
-const key = fs.readFileSync("localhost-key.pem", "utf-8");
-const cert = fs.readFileSync("localhost.pem", "utf-8");
-
-const app = express();
-
-app.get("/", (req, res, next) => {
-  res.send("Hello World");
-});
-
-server = https.createServer({ key, cert }, app);
-
-server.listen(3000);
-```

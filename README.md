@@ -53,3 +53,8 @@ We're thrilled to have you join us on this exciting journey of exploration, lear
     - [Session #2](/Modules/Backend/D3/S2/guide.md)
     - [Session #3](/Modules/Backend/D3/S3/guide.md)
     - [Session #4](/Modules/Backend/D3/S4/guide.md)
+  - D4 (Advanced Validation, Google Sign-In)
+    - [Session #1](/Modules/Backend/D4/S1/guide.md)
+    - [Session #2](/Modules/Backend/D4/S2/guide.md)
+    - [Session #3](/Modules/Backend/D4/S3/guide.md)
+    - [Session #4](/Modules/Backend/D4/S4/guide.md)

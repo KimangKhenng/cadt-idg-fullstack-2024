@@ -1,5 +1,7 @@
 # W4 S3: Google Single Sign-On (SSO) + Integration
 
+Watch recorded class: https://youtu.be/Iy2ceWtbMUg
+
 ## What is Google Single Sign-On (SSO)?
 [Google Single Sign-On (SSO)](https://developers.google.com/identity/protocols/oauth2) is a mechanism that allows users to authenticate themselves using their Google account credentials.
 Google SSO is based on the OAuth 2.0 protocol, which allows third-party applications to obtain limited access to a user's Google account without exposing their credentials.

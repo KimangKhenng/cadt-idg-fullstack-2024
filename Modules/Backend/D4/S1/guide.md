@@ -1,5 +1,7 @@
 # D4 S1: Advanced Validation
 
+Watch recorded class: https://youtu.be/SJFQHl36XqE
+
 ## Validation Chain
 
 Express-Validator allows you to create a validation chain for more complex validation scenarios where you can apply multiple validation rules to a single field. Below are some features and methods that can be used within a validation chain:

@@ -1,6 +1,6 @@
-# D1 S1 : Error Handling and MongoDB
+# D1 S1 : Introduction to Express.js
 
-Watch recorded class: https://youtu.be/zDll2KksG1Q
+Watch recorded class: https://youtu.be/JqE0kQcol-8
 
 ## What is Express.js?
 

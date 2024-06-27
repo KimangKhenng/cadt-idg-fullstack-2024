@@ -58,3 +58,8 @@ We're thrilled to have you join us on this exciting journey of exploration, lear
     - [Session #2](/Modules/Backend/D4/S2/guide.md)
     - [Session #3](/Modules/Backend/D4/S3/guide.md)
     - [Session #4](/Modules/Backend/D4/S4/guide.md)
+  - D5 (Role-based Authorization)
+    - [Session #1](/Modules/Backend/D5/S1/guide.md)
+    - [Session #2](/Modules/Backend/D5/S2/guide.md)
+    - [Session #3](/Modules/Backend/D5/S3/guide.md)
+    - [Session #4](/Modules/Backend/D5/S4/guide.md)

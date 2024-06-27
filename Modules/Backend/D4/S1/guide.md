@@ -1,6 +1,4 @@
-# D4 S1: Advanced Validation
-
-Watch recorded class: https://youtu.be/SJFQHl36XqE
+# D5 S1: Role-based Authorization
 
 ## Validation Chain
 

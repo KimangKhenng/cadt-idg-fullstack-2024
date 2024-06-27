@@ -1,3 +1,5 @@
-# D4 S2: Practice validation
+# D4 S2: Improving RBAC
 
-Watch recorded class: https://youtu.be/JAlhDvDXyK8
+There are many areas we can improve the current implementation:
+- Create role model and save role configuration to database
+- Create enum for permission to easily maintain in the future

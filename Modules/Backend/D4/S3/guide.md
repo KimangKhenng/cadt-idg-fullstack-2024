@@ -1,4 +1,4 @@
-# W4 S3: Google Single Sign-On (SSO) + Integration
+# D4 S3: Google Single Sign-On (SSO) + Integration
 
 Watch recorded class: https://youtu.be/Iy2ceWtbMUg
 

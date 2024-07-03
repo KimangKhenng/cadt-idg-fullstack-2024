@@ -1,5 +1,7 @@
 # D5 S4: Advanced MongoDB Query & Operators
 
+Watch video: https://youtu.be/ycloi9zFIns
+
 Let's practice these concepts
 
 References:

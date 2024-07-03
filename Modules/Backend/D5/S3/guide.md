@@ -1,5 +1,7 @@
 # D5 S3: Dockerization
 
+Watch video: https://youtu.be/rWw0ZHwsF5Q
+
 Docker ensure `one code, run everywhere!`
 
 Make sure you have at least 16GB RAM and the docker is installed!

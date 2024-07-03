@@ -1,5 +1,7 @@
 # D5 S2: File Upload to AWS S3
 
+Watch video: https://youtu.be/AHDztx5qhRU
+
 We'll add file upload functionality to Amazon S3 using `multer` and `@aws-sdk/client-s3`. 
 
 ## 1: Create an AWS Account and S3 Bucket

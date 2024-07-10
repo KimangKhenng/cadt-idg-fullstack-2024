@@ -71,3 +71,5 @@ We're thrilled to have you join us on this exciting journey of exploration, lear
   - D7 (Caching with Redis)
     - [Session #1](/Modules/Backend/D7/S1/guide.md)
     - [Session #2](/Modules/Backend/D7/S2/guide.md)
+  - D8 (API Security)
+    - [Session #1](/Modules/Backend/D8/S1/guide.md)

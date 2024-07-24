@@ -1,5 +1,7 @@
 # D9 S1: Real time communication via WebSocket
 
+Watch video: https://youtu.be/cxrolBDuTyg
+
 `socket.io` library enables us to establish real time communication between client and server.
 
 ## 1. Create project and install library

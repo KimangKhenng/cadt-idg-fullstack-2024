@@ -4,8 +4,8 @@ Welcome aboard to our FullStack development course at CADT-IDG!
 
 We're thrilled to have you join us on this exciting journey of exploration, learning, and growth in the realms of fullstack development.
 
-- [Bootstrapping Environment](/bootstrap.md)
 - Frontend : Vue.js 
+  - [Bootstrapping Node.js](/bootstrap_vue.md)
   - D1 (Vue Widget, Vue SPA)
     - [Session #1](/Modules/Frontend/D1/S1/guide.md)
     - [Session #2](/Modules/Frontend/D1/S2/guide.md)
@@ -37,6 +37,7 @@ We're thrilled to have you join us on this exciting journey of exploration, lear
     - [Session #3](/Modules/Frontend/D6/S3/guide.md)
     - [Session #4](/Modules/Frontend/D6/S4/guide.md)
 - Backend : Express.JS
+  - [Bootstrapping Node.js](/bootstrap_vue.md)
   - [Code repository](https://github.com/KimangKhenng/my-express-cadt)
   - D1 (Introduction to ExpressJS)
     - [Session #1](/Modules/Backend/D1/S1/guide.md)
@@ -82,3 +83,10 @@ We're thrilled to have you join us on this exciting journey of exploration, lear
   - D10 (API Testing and Integration)
     - [Session #1](/Modules/Backend/D10/S1/guide.md)
     - [Session #2](/Modules/Backend/D10/S2/guide.md)
+- DevOps
+  - [Bootstrapping Local Cloud & CI](/bootstrap_ci.md)
+  - D1 (Introduction)
+    - [Session #1](/Modules/DevOps/D1/S1/guide.md)
+    - [Session #2](/Modules/DevOps/D1/S2/guide.md)
+    - [Session #3](/Modules/DevOps/D1/S3/guide.md)
+    - [Session #4](/Modules/DevOps/D1/S4/guide.md)

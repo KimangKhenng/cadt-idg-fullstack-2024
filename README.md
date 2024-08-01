@@ -90,3 +90,8 @@ We're thrilled to have you join us on this exciting journey of exploration, lear
     - [Session #2](/Modules/DevOps/D1/S2/guide.md)
     - [Session #3](/Modules/DevOps/D1/S3/guide.md)
     - [Session #4](/Modules/DevOps/D1/S4/guide.md)
+  - D2 (Automate EC2)
+    - [Session #1](/Modules/DevOps/D2/S1/guide.md)
+    - [Session #2](/Modules/DevOps/D2/S2/guide.md)
+    - [Session #3](/Modules/DevOps/D2/S3/guide.md)
+    - [Session #4](/Modules/DevOps/D2/S4/guide.md)

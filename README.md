@@ -101,4 +101,4 @@ We're thrilled to have you join us on this exciting journey of exploration, lear
     - [Session #1](/Modules/DevOps/D4/S1/guide.md)
     - [Session #2](/Modules/DevOps/D4/S2/guide.md)
     - [Session #3](/Modules/DevOps/D4/S3/guide.md)
-    - [Session #4](/Modules/DevOps/D4/S4/guide.md
+    - [Session #4](/Modules/DevOps/D4/S4/guide.md)

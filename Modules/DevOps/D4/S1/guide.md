@@ -237,7 +237,3 @@ After running the playbook, you can verify that `nginx` has been removed:
 - **Idempotency:** Ansible will only remove `nginx` if it is currently installed. If `nginx` is not present, the task will do nothing.
 - **Dependencies:** Be cautious if other applications on your server depend on `nginx`. Removing it might affect other services. Always ensure that removal does not break other configurations.
 - **Cleanup:** When removing software like `nginx`, you might also want to remove associated configuration files or directories. You can add additional tasks to clean up these files.
-
-### Conclusion
-
-By updating your playbook to set `nginx`'s `state` to `absent`, Ansible will automatically uninstall `nginx` from your EC2 instance the next time you run the playbook. This approach allows you to manage software installations and removals declaratively using Ansible.

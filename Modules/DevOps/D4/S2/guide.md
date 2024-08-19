@@ -1,5 +1,6 @@
 ### D4 S2 Service Discovery with Consul, Node.js (using Axios), and Nginx Automated in Docker Compose
 
+Watch recorded video: https://youtu.be/Cna9I2ZvQvA
 #### Prerequisites
 
 - Basic knowledge of Docker and Docker Compose.

@@ -1,5 +1,7 @@
 # D4 S1 Ansible Tutorial: Getting Started with EC2
 
+Watch recorded video: https://youtu.be/6exmlKv-1kc
+
 This tutorial will guide you through the process of using Ansible to manage and automate tasks on your EC2 instances. We'll assume you already have an EC2 instance running and an SSH key ready for access.
 
 ## Prerequisites

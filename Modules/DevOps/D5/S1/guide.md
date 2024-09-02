@@ -1,5 +1,7 @@
 # D5 S1 : Building, Tagging, Publishing, and Optimizing a Docker Image with Distroless
 
+Watch video: https://youtu.be/1OoHB5Q8Yhs
+
 #### Prerequisites
 - Basic understanding of Docker and containers
 - Docker installed on your machine

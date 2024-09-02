@@ -102,7 +102,9 @@ We're thrilled to have you join us on this exciting journey of exploration, lear
     - [Session #2](/Modules/DevOps/D4/S2/guide.md)
     - [Session #3](/Modules/DevOps/D4/S3/guide.md)
   - D5 (Container Orchestration & Production)
-    - [Session #1](/Modules/DevOps/D5/S1/guide.md)
-    - [Session #2](/Modules/DevOps/D5/S2/guide.md)
+    - [#1 Dockerhub & Registry](/Modules/DevOps/D5/S1/guide.md)
+    - [#2 Kubernetes (K8S)](/Modules/DevOps/D5/S2/guide.md)
+    - [#3 K8S on Multi Cluster (EC2)](/Modules/DevOps/D5/S3/guide.md)
+    - [#4 Configuring Multi-Node K8S](/Modules/DevOps/D5/S4/guide.md)
 - Project 2:
   - [Scope](/Modules/P2/scope.md)

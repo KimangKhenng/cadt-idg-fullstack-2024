@@ -1,5 +1,7 @@
 # D5 S3 Setting Up Multi-Node Environment for K8S
 
+Watch video: https://youtu.be/6GPH73iSwHQ
+
 ### Step 1: Install Docker
 1. **Install Docker on all nodes**:
    ```bash

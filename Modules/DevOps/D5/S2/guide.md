@@ -1,5 +1,7 @@
 # D5 S2 Container Orchestration via Kubernetes (k8s)
 
+Watch video: https://youtu.be/nhhYZfXBWh4
+
 Kubernetes (k8s) is a powerful container orchestration tool that automates the deployment, scaling, and management of containerized applications. This tutorial will guide you through installing Kubernetes on MacOS and Linux, focusing on essential tools: `kubectl`, `minikube`, and `Kind`. Additionally, you'll learn about the Kubernetes architecture and the advantages of using a declarative approach to manage resources.
 
 #### 1. **Installation Guide**

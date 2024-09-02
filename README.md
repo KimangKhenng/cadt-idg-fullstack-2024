@@ -104,3 +104,5 @@ We're thrilled to have you join us on this exciting journey of exploration, lear
   - D5 (Container Orchestration & Production)
     - [Session #1](/Modules/DevOps/D5/S1/guide.md)
     - [Session #2](/Modules/DevOps/D5/S2/guide.md)
+- Project 2:
+  - [Scope](/Modules/P2/scope.md)

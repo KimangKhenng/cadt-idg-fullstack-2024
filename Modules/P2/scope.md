@@ -1,12 +1,12 @@
-# Project 2: Integrating DevOps and Backend Development
+# Project 2: Integrating Frontend, Backend ,and DevOps
 
 #### **Project Scope:**
-In this module, students will integrate their knowledge of backend development with Express and MongoDB with DevOps skills to build and deploy a comprehensive web application. The project will involve designing, developing, and deploying a full-stack application, focusing on applying DevOps practices to automate and streamline the development lifecycle.
+In this module, students will integrate their knowledge of frontend (Vuejs) and backend development with Express and MongoDB with DevOps skills to build and deploy a comprehensive web application. The project will involve designing, developing, and deploying a full-stack application, focusing on applying DevOps practices to automate and streamline the development lifecycle.
 
 #### **Project Requirements:**
 
 1. **Project Overview:**
-   - **Application Type:** Develop a RESTful web application using Express.js for the backend and MongoDB for the database.
+   - **Application Type:** Develop a RESTful web application using Express.js for the backend and MongoDB for the database and Vuejs for frontend.
    - **Features:**
      - User authentication and authorization (sign-up, login, password reset).
      - CRUD operations for at least one major resource (e.g., blog posts, user profiles).
@@ -25,6 +25,7 @@ In this module, students will integrate their knowledge of backend development w
      - Ensure that the infrastructure is reproducible and version-controlled.
 
 3. **Deployment:**
+   - **Serve Frontend from Backend:** Serve frontend as static assets from backend to avoid having 2 servers and cors issue.
    - **Cloud Deployment:** Deploy the application to a cloud provider (e.g., AWS, Azure, GCP). Alternatively, students can use LocalStack for cloud emulation.
    - **Domain and SSL:** Configure a custom domain name and SSL certificate for secure communication (if deploying to the cloud).
 
